@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Матрона Московская — ладан, иконы, чётки и браслеты на заказ</title>
+<meta name="description" content="Ладан и иконы на заказ, чётки и браслеты плетёные и из бусин. Тирасполь. Андрей Мемей.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Alegreya+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#0b1633;
+  --deep:#10204a;
+  --line:#2a3c6b;
+  --gold:#d4af5a;
+  --gold-soft:#e8cf8f;
+  --text:#e9e6dc;
+  --muted:#aeb6cc;
+  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --sans:"Alegreya Sans","Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--night);color:var(--text);font-family:var(--sans);font-size:18px;line-height:1.6}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+
+header{border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:16px;padding-bottom:16px}
+.logo{font-family:var(--serif);font-weight:700;font-size:1.4rem;color:var(--gold);text-decoration:none;letter-spacing:.02em}
+nav{display:flex;gap:22px;flex-wrap:wrap}
+nav a{text-decoration:none;color:var(--muted);font-size:1rem}
+nav a:hover{color:var(--gold-soft)}
+
+.hero{text-align:center;padding:84px 0 88px;background:radial-gradient(ellipse at 50% 0%,var(--deep),var(--night) 70%)}
+.cross{width:34px;height:52px;margin:0 auto 28px;position:relative}
+.cross::before,.cross::after{content:"";position:absolute;background:var(--gold);border-radius:2px}
+.cross::before{left:15px;top:0;width:4px;height:52px}
+.cross::after{left:0;top:15px;width:34px;height:4px;box-shadow:0 12px 0 -1px transparent}
+h1{font-family:var(--serif);font-weight:700;font-size:clamp(2.6rem,8vw,4.8rem);line-height:1.05;color:var(--gold);margin-bottom:18px}
+.hero p{font-size:1.25rem;color:var(--text);max-width:34ch;margin:0 auto 34px}
+.btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 28px;border:1px solid var(--gold);border-radius:2px;text-decoration:none;font-weight:500;font-size:1.05rem;transition:background .2s,color .2s}
+.btn.fill{background:var(--gold);color:var(--night)}
+.btn.fill:hover{background:var(--gold-soft)}
+.btn.line{color:var(--gold)}
+.btn.line:hover{background:var(--gold);color:var(--night)}
+
+section{padding:72px 0;border-top:1px solid var(--line)}
+h2{font-family:var(--serif);font-weight:600;font-size:clamp(1.9rem,4.5vw,2.6rem);color:var(--gold);margin-bottom:22px;line-height:1.15}
+.about p{max-width:62ch;font-size:1.12rem}
+.about .sign{margin-top:18px;font-family:var(--serif);font-size:1.3rem;color:var(--gold-soft)}
+
+.items{list-style:none;border-top:1px solid var(--line)}
+.items li{display:grid;grid-template-columns:1fr auto;gap:8px 28px;align-items:center;padding:22px 0;border-bottom:1px solid var(--line)}
+.items h3{font-family:var(--serif);font-weight:600;font-size:1.6rem;color:var(--text);line-height:1.2}
+.items p{color:var(--muted);grid-column:1}
+.items .side{grid-column:2;grid-row:1/3;text-align:right;font-size:.98rem;color:var(--gold-soft)}
+.items .side a{display:block;margin-top:4px;color:var(--gold)}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
+.ph{aspect-ratio:1/1;border:1px dashed var(--line);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.95rem;background:var(--deep)}
+
+.steps{list-style:none;counter-reset:s;display:grid;gap:18px;max-width:62ch}
+.steps li{counter-increment:s;display:flex;gap:18px;align-items:baseline}
+.steps li::before{content:counter(s);font-family:var(--serif);font-size:2rem;color:var(--gold);min-width:1.4ch}
+
+.contact{text-align:center}
+.contact p{color:var(--muted)}
+.contact .big{font-family:var(--serif);font-size:clamp(1.8rem,5vw,2.6rem);color:var(--text);text-decoration:none;display:block;margin:6px 0}
+.contact .btns{margin-top:30px}
+.info{margin-bottom:26px}
+
+footer{border-top:1px solid var(--line);padding:26px 0;text-align:center;color:var(--muted);font-size:.95rem}
+
+@media(max-width:560px){
+  .items li{grid-template-columns:1fr}
+  .items .side{grid-column:1;grid-row:auto;text-align:left}
+  .hero{padding:60px 0 64px}
+  section{padding:56px 0}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top">Матрона Московская</a>
+    <nav aria-label="Разделы">
+      <a href="#about">О нас</a>
+      <a href="#work">Что делаем</a>
+      <a href="#gallery">Галерея</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div class="cross" aria-hidden="true"></div>
+      <h1>Матрона Московская</h1>
+      <p>Ладан, иконы, чётки и браслеты на заказ</p>
+      <div class="btns">
+        <a class="btn fill" href="tel:077736361">Позвонить</a>
+        <a class="btn line" href="https://t.me/Ponomar_cof_sobor" target="_blank" rel="noopener">Написать в Telegram</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="about" class="about">
+    <div class="wrap">
+      <h2>О нас</h2>
+      <p>Ладан и иконы мы делаем сами и только на заказ. Чётки и браслеты плетём или собираем из бусин, учитывая ваши пожелания.</p>
+      <p class="sign">Андрей Мемей</p>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <h2>Что мы делаем</h2>
+      <ul class="items">
+        <li>
+          <h3>Ладан на заказ</h3>
+          <p>Изготовим ладан по вашему заказу.</p>
+          <div class="side">Цена по запросу<a href="https://t.me/Ponomar_cof_sobor" target="_blank" rel="noopener">Уточнить в Telegram</a></div>
+        </li>
+        <li>
+          <h3>Иконы на заказ</h3>
+          <p>Напишем икону по вашему заказу.</p>
+          <div class="side">Цена по запросу<a href="https://t.me/Ponomar_cof_sobor" target="_blank" rel="noopener">Уточнить в Telegram</a></div>
+        </li>
+        <li>
+          <h3>Чётки</h3>
+          <p>Плетёные или из бусин, как вы захотите.</p>
+          <div class="side">Цена по запросу<a href="https://t.me/Ponomar_cof_sobor" target="_blank" rel="noopener">Уточнить в Telegram</a></div>
+        </li>
+        <li>
+          <h3>Браслеты</h3>
+          <p>Плетёные или из бусин, как вы захотите.</p>
+          <div class="side">Цена по запросу<a href="https://t.me/Ponomar_cof_sobor" target="_blank" rel="noopener">Уточнить в Telegram</a></div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="wrap">
+      <h2>Наши работы</h2>
+      <!-- Чтобы добавить фото, замените <div class="ph">…</div> на <img src="photo1.jpg" alt="Описание" style="width:100%;height:100%;object-fit:cover"> внутри <div class="ph"> -->
+      <div class="grid">
+        <div class="ph">Фото скоро</div>
+        <div class="ph">Фото скоро</div>
+        <div class="ph">Фото скоро</div>
+        <div class="ph">Фото скоро</div>
+        <div class="ph">Фото скоро</div>
+        <div class="ph">Фото скоро</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="order">
+    <div class="wrap">
+      <h2>Как заказать</h2>
+      <ol class="steps">
+        <li>Напишите нам в Telegram или позвоните.</li>
+        <li>Обсудим ваши пожелания и назовём цену.</li>
+        <li>Изготовим заказ.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="contacts" class="contact">
+    <div class="wrap">
+      <h2>Контакты</h2>
+      <p class="info">Тирасполь · ежедневно с 14:00 до 21:00</p>
+      <a class="big" href="tel:077736361">077736361</a>
+      <a class="big" href="https://t.me/Ponomar_cof_sobor" target="_blank" rel="noopener">@Ponomar_cof_sobor</a>
+      <div class="btns">
+        <a class="btn fill" href="tel:077736361">Позвонить</a>
+        <a class="btn line" href="https://t.me/Ponomar_cof_sobor" target="_blank" rel="noopener">Написать в Telegram</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© Матрона Московская, Андрей Мемей</div>
+</footer>
+
+</body>
+</html>
