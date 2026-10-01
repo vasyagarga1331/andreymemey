@@ -66,6 +66,15 @@ h2{font-family:var(--serif);font-weight:600;font-size:clamp(1.9rem,4.5vw,2.6rem)
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
 .grid img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block;border:1px solid var(--line);background:var(--deep)}
 
+.slider{position:relative}
+.track{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.track::-webkit-scrollbar{display:none}
+.slide{flex:0 0 100%;scroll-snap-align:center;margin:0}
+.slide img{width:100%;height:min(70vh,560px);object-fit:contain;display:block;background:var(--deep);border:1px solid var(--line)}
+.slide figcaption{margin-top:10px;color:var(--muted);text-align:center;font-size:1rem}
+.sbtns{display:flex;justify-content:center;gap:12px;margin-top:16px}
+.sbtns button{font:inherit;background:none;color:var(--gold);border:1px solid var(--gold);padding:8px 22px;cursor:pointer;font-size:1.3rem;line-height:1}
+.sbtns button:hover{background:var(--gold);color:var(--night)}
 .steps{list-style:none;counter-reset:s;display:grid;gap:18px;max-width:62ch}
 .steps li{counter-increment:s;display:flex;gap:18px;align-items:baseline}
 .steps li::before{content:counter(s);font-family:var(--serif);font-size:2rem;color:var(--gold);min-width:1.4ch}
@@ -165,6 +174,29 @@ footer{border-top:1px solid var(--line);padding:26px 0;text-align:center;color:v
     </div>
   </section>
 
+  <section id="more">
+    <div class="wrap">
+      <h2>Ещё работы и ладан</h2>
+      <div class="slider">
+        <div class="track" id="track" tabindex="0" aria-label="Слайдер с работами">
+          <figure class="slide"><img src="slide-1.jpg" alt="Икона святой Фелицаты" loading="lazy"><figcaption>Икона святой Фелицаты</figcaption></figure>
+          <figure class="slide"><img src="slide-2.jpg" alt="Икона «Покров Пресвятой Богородицы» на камне" loading="lazy"><figcaption>Икона «Покров Пресвятой Богородицы» на камне</figcaption></figure>
+          <figure class="slide"><img src="slide-4.jpg" alt="Икона Христа Спасителя" loading="lazy"><figcaption>Икона Христа Спасителя</figcaption></figure>
+          <figure class="slide"><img src="slide-6.jpg" alt="Икона святителя Николая: от рисунка до готовой работы" loading="lazy"><figcaption>Икона святителя Николая: от рисунка до готовой работы</figcaption></figure>
+          <figure class="slide"><img src="slide-3.jpg" alt="Ладан в курильнице" loading="lazy"><figcaption>Ладан в курильнице</figcaption></figure>
+          <figure class="slide"><img src="slide-5.jpg" alt="Ладан, расфасованный в пакетики" loading="lazy"><figcaption>Ладан, расфасованный в пакетики</figcaption></figure>
+          <figure class="slide"><img src="slide-7.jpg" alt="Ладан в пакетиках" loading="lazy"><figcaption>Ладан в пакетиках</figcaption></figure>
+          <figure class="slide"><img src="slide-8.jpg" alt="Ладан в коробочке с авторской этикеткой" loading="lazy"><figcaption>Ладан в коробочке с авторской этикеткой</figcaption></figure>
+          <figure class="slide"><img src="slide-9.jpg" alt="Авторская этикетка «Ручной работы»" loading="lazy"><figcaption>Авторская этикетка «Ручной работы»</figcaption></figure>
+        </div>
+        <div class="sbtns">
+          <button type="button" id="prev" aria-label="Назад">&#8592;</button>
+          <button type="button" id="next" aria-label="Вперёд">&#8594;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="order">
     <div class="wrap">
       <h2>Как заказать</h2>
@@ -194,5 +226,11 @@ footer{border-top:1px solid var(--line);padding:26px 0;text-align:center;color:v
   <div class="wrap">© Матрона Московская, Андрей Мемей</div>
 </footer>
 
+<script>
+(function(){var t=document.getElementById('track');
+function go(d){t.scrollBy({left:d*t.clientWidth,behavior:'smooth'})}
+document.getElementById('prev').onclick=function(){go(-1)};
+document.getElementById('next').onclick=function(){go(1)};})();
+</script>
 </body>
 </html>
