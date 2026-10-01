@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Матрона Московская — ладан, иконы, чётки и браслеты на заказ</title>
 <meta name="description" content="Ладан и иконы на заказ, чётки и браслеты плетёные и из бусин. Тирасполь. Андрей Мемей.">
+<link rel="icon" href="logo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Alegreya+Sans:wght@400;500&display=swap" rel="stylesheet">
@@ -29,7 +30,9 @@ a{color:inherit}
 
 header{border-bottom:1px solid var(--line)}
 header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:16px;padding-bottom:16px}
-.logo{font-family:var(--serif);font-weight:700;font-size:1.4rem;color:var(--gold);text-decoration:none;letter-spacing:.02em}
+.logo{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-weight:700;font-size:1.4rem;color:var(--gold);text-decoration:none;letter-spacing:.02em}
+.logo img{width:44px;height:44px;border-radius:50%;background:#fff}
+.hero-logo{width:170px;height:170px;display:block;margin:0 auto 24px;border-radius:50%;background:#fff}
 nav{display:flex;gap:22px;flex-wrap:wrap}
 nav a{text-decoration:none;color:var(--muted);font-size:1rem}
 nav a:hover{color:var(--gold-soft)}
@@ -61,7 +64,7 @@ h2{font-family:var(--serif);font-weight:600;font-size:clamp(1.9rem,4.5vw,2.6rem)
 .items .side a{display:block;margin-top:4px;color:var(--gold)}
 
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
-.ph{aspect-ratio:1/1;border:1px dashed var(--line);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.95rem;background:var(--deep)}
+.grid img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block;border:1px solid var(--line);background:var(--deep)}
 
 .steps{list-style:none;counter-reset:s;display:grid;gap:18px;max-width:62ch}
 .steps li{counter-increment:s;display:flex;gap:18px;align-items:baseline}
@@ -88,7 +91,7 @@ footer{border-top:1px solid var(--line);padding:26px 0;text-align:center;color:v
 
 <header>
   <div class="wrap">
-    <a class="logo" href="#top">Матрона Московская</a>
+    <a class="logo" href="#top"><img src="logo.jpg" alt="">Матрона Московская</a>
     <nav aria-label="Разделы">
       <a href="#about">О нас</a>
       <a href="#work">Что делаем</a>
@@ -101,7 +104,7 @@ footer{border-top:1px solid var(--line);padding:26px 0;text-align:center;color:v
 <main id="top">
   <div class="hero">
     <div class="wrap">
-      <div class="cross" aria-hidden="true"></div>
+      <img class="hero-logo" src="logo.jpg" alt="Логотип Матрона Московская">
       <h1>Матрона Московская</h1>
       <p>Ладан, иконы, чётки и браслеты на заказ</p>
       <div class="btns">
@@ -150,14 +153,14 @@ footer{border-top:1px solid var(--line);padding:26px 0;text-align:center;color:v
   <section id="gallery">
     <div class="wrap">
       <h2>Наши работы</h2>
-      <!-- Чтобы добавить фото, замените <div class="ph">…</div> на <img src="photo1.jpg" alt="Описание" style="width:100%;height:100%;object-fit:cover"> внутри <div class="ph"> -->
       <div class="grid">
-        <div class="ph">Фото скоро</div>
-        <div class="ph">Фото скоро</div>
-        <div class="ph">Фото скоро</div>
-        <div class="ph">Фото скоро</div>
-        <div class="ph">Фото скоро</div>
-        <div class="ph">Фото скоро</div>
+        <img src="work-2.jpg" alt="Икона великомученицы Ирины" loading="lazy">
+        <img src="work-6.jpg" alt="Лик Христа в терновом венце" loading="lazy">
+        <img src="work-7.jpg" alt="Икона Георгия Победоносца на коне" loading="lazy">
+        <img src="work-5.jpg" alt="Эскиз иконы Покров Богородицы" loading="lazy">
+        <img src="work-3.jpg" alt="Плетёные чётки-браслет из чёрной нити" loading="lazy">
+        <img src="work-4.jpg" alt="Лик, выполненный в иконописной манере" loading="lazy">
+        <img src="work-1.jpg" alt="Зарисовка руки" loading="lazy">
       </div>
     </div>
   </section>
