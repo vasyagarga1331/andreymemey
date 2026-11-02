@@ -3,234 +3,282 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Матрона Московская — ладан, иконы, чётки и браслеты на заказ</title>
-<meta name="description" content="Ладан и иконы на заказ, чётки и браслеты плетёные и из бусин. Тирасполь. Андрей Мемей.">
-<link rel="icon" href="logo.jpg">
+<title>Матрона Московская — иконы, ладан, чётки и браслеты на заказ в Тирасполе</title>
+<meta name="description" content="Пишем иконы, делаем ладан, плетём чётки и браслеты на заказ. Тирасполь, мастер Андрей Мемей. Ежедневно с 14:00 до 21:00.">
+<link rel="icon" href="img/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Alegreya+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --night:#0b1633;
-  --deep:#10204a;
-  --line:#2a3c6b;
-  --gold:#d4af5a;
-  --gold-soft:#e8cf8f;
-  --text:#e9e6dc;
-  --muted:#aeb6cc;
+  --bg:#1b1214; --bg2:#241a1d; --line:#4a3a3d;
+  --text:#f1e8da; --muted:#b9aca0; --gold:#c9a24d; --gold-d:#a98334; --wine:#6b2230;
   --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
-  --sans:"Alegreya Sans","Segoe UI",Arial,sans-serif;
+  --sans:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --pad:clamp(20px,5vw,64px);
 }
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--night);color:var(--text);font-family:var(--sans);font-size:18px;line-height:1.6}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{background:var(--bg);color:var(--text);font:400 17px/1.65 var(--sans);-webkit-font-smoothing:antialiased;padding-bottom:76px}
+img{display:block;max-width:100%;height:auto;background:var(--bg2)}
 a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.1;letter-spacing:.005em}
+h1{font-size:clamp(40px,8vw,84px)}
+h2{font-size:clamp(32px,5vw,52px);margin-bottom:12px}
+h3{font-size:26px;margin-bottom:6px}
 :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
-.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 var(--pad)}
+section{padding:72px 0}
+.lead{color:var(--muted);max-width:56ch;margin-bottom:36px}
 
-header{border-bottom:1px solid var(--line)}
-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:16px;padding-bottom:16px}
-.logo{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-weight:700;font-size:1.4rem;color:var(--gold);text-decoration:none;letter-spacing:.02em}
-.logo img{width:44px;height:44px;border-radius:50%;background:#fff}
-.hero-logo{width:170px;height:170px;display:block;margin:0 auto 24px;border-radius:50%;background:#fff}
-nav{display:flex;gap:22px;flex-wrap:wrap}
-nav a{text-decoration:none;color:var(--muted);font-size:1rem}
-nav a:hover{color:var(--gold-soft)}
+/* buttons */
+.btn{display:inline-block;padding:14px 26px;border-radius:4px;font:600 16px/1 var(--sans);text-decoration:none;border:1.5px solid var(--gold);cursor:pointer;transition:background .2s,color .2s}
+.btn-gold{background:var(--gold);color:#1b1214}
+.btn-gold:hover{background:#dbb865}
+.btn-line{background:transparent;color:var(--gold)}
+.btn-line:hover{background:rgba(201,162,77,.12)}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
 
-.hero{text-align:center;padding:84px 0 88px;background:radial-gradient(ellipse at 50% 0%,var(--deep),var(--night) 70%)}
-.cross{width:34px;height:52px;margin:0 auto 28px;position:relative}
-.cross::before,.cross::after{content:"";position:absolute;background:var(--gold);border-radius:2px}
-.cross::before{left:15px;top:0;width:4px;height:52px}
-.cross::after{left:0;top:15px;width:34px;height:4px;box-shadow:0 12px 0 -1px transparent}
-h1{font-family:var(--serif);font-weight:700;font-size:clamp(2.6rem,8vw,4.8rem);line-height:1.05;color:var(--gold);margin-bottom:18px}
-.hero p{font-size:1.25rem;color:var(--text);max-width:34ch;margin:0 auto 34px}
-.btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.btn{display:inline-block;padding:13px 28px;border:1px solid var(--gold);border-radius:2px;text-decoration:none;font-weight:500;font-size:1.05rem;transition:background .2s,color .2s}
-.btn.fill{background:var(--gold);color:var(--night)}
-.btn.fill:hover{background:var(--gold-soft)}
-.btn.line{color:var(--gold)}
-.btn.line:hover{background:var(--gold);color:var(--night)}
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(27,18,20,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font:600 22px var(--serif)}
+.brand img{width:44px;height:44px;object-fit:contain;background:none}
+nav{display:none;gap:28px;font-size:15px}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--gold)}
+@media(min-width:820px){nav{display:flex}}
 
-section{padding:72px 0;border-top:1px solid var(--line)}
-h2{font-family:var(--serif);font-weight:600;font-size:clamp(1.9rem,4.5vw,2.6rem);color:var(--gold);margin-bottom:22px;line-height:1.15}
-.about p{max-width:62ch;font-size:1.12rem}
-.about .sign{margin-top:18px;font-family:var(--serif);font-size:1.3rem;color:var(--gold-soft)}
+/* hero */
+.hero{padding:48px 0 72px}
+.hero .wrap{display:grid;gap:40px;align-items:center}
+.hero p{color:var(--muted);font-size:19px;max-width:42ch;margin:20px 0 28px}
+.emblem img{width:100%;max-width:440px;margin:0 auto;background:none;filter:drop-shadow(0 0 40px rgba(201,162,77,.2))}
+.arch{border-radius:999px 999px 6px 6px;overflow:hidden;border:1.5px solid var(--gold);padding:8px;background:var(--bg2)}
+.arch img{border-radius:999px 999px 2px 2px;width:100%;aspect-ratio:4/5;object-fit:cover}
+.hero .arch{max-width:420px;width:100%;margin:0 auto}
+@media(min-width:820px){.hero .wrap{grid-template-columns:1.15fr .85fr}.hero .arch{margin:0 0 0 auto}}
 
-.items{list-style:none;border-top:1px solid var(--line)}
-.items li{display:grid;grid-template-columns:1fr auto;gap:8px 28px;align-items:center;padding:22px 0;border-bottom:1px solid var(--line)}
-.items h3{font-family:var(--serif);font-weight:600;font-size:1.6rem;color:var(--text);line-height:1.2}
-.items p{color:var(--muted);grid-column:1}
-.items .side{grid-column:2;grid-row:1/3;text-align:right;font-size:.98rem;color:var(--gold-soft)}
-.items .side a{display:block;margin-top:4px;color:var(--gold)}
+/* catalog */
+.grid4{display:grid;gap:24px;grid-template-columns:1fr}
+@media(min-width:600px){.grid4{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.grid4{grid-template-columns:repeat(4,1fr)}}
+.card{background:var(--bg2);border:1px solid var(--line);border-radius:6px;padding:14px 14px 22px;display:flex;flex-direction:column}
+.card .arch{padding:5px;margin-bottom:16px}
+.card .arch img{aspect-ratio:1/1.1}
+.card h3{padding:0 6px}
+.card p{padding:0 6px;color:var(--muted);font-size:15px;flex:1;margin-bottom:14px}
+.card .btn{margin:0 6px;text-align:center;padding:12px 16px;font-size:15px}
 
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
-.grid img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block;border:1px solid var(--line);background:var(--deep)}
+/* incense */
+.incense{background:var(--bg2);border-block:1px solid var(--line)}
+.incense .wrap{display:grid;gap:32px}
+.incense ul{list-style:none;padding:0;margin:0 0 28px;display:grid;gap:10px}
+.incense li{padding-left:22px;position:relative;color:var(--text)}
+.incense li::before{content:"";position:absolute;left:0;top:.7em;width:8px;height:8px;background:var(--gold);transform:rotate(45deg)}
+.photos{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.photos img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:4px}
+.photos img:first-child{grid-column:1/-1;aspect-ratio:16/10}
+@media(min-width:900px){.incense .wrap{grid-template-columns:.9fr 1.1fr;align-items:center}}
 
-.slider{position:relative}
-.track{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
-.track::-webkit-scrollbar{display:none}
-.slide{flex:0 0 100%;scroll-snap-align:center;margin:0}
-.slide img{width:100%;height:min(70vh,560px);object-fit:contain;display:block;background:var(--deep);border:1px solid var(--line)}
-.slide figcaption{margin-top:10px;color:var(--muted);text-align:center;font-size:1rem}
-.sbtns{display:flex;justify-content:center;gap:12px;margin-top:16px}
-.sbtns button{font:inherit;background:none;color:var(--gold);border:1px solid var(--gold);padding:8px 22px;cursor:pointer;font-size:1.3rem;line-height:1}
-.sbtns button:hover{background:var(--gold);color:var(--night)}
-.steps{list-style:none;counter-reset:s;display:grid;gap:18px;max-width:62ch}
-.steps li{counter-increment:s;display:flex;gap:18px;align-items:baseline}
-.steps li::before{content:counter(s);font-family:var(--serif);font-size:2rem;color:var(--gold);min-width:1.4ch}
+/* gallery */
+.gallery{columns:2;column-gap:14px}
+@media(min-width:800px){.gallery{columns:3}}
+.gallery figure{break-inside:avoid;margin-bottom:14px}
+.gallery img{width:100%;border-radius:4px}
+.gallery figcaption{font-size:14px;color:var(--muted);padding:8px 2px 0}
 
-.contact{text-align:center}
-.contact p{color:var(--muted)}
-.contact .big{font-family:var(--serif);font-size:clamp(1.8rem,5vw,2.6rem);color:var(--text);text-decoration:none;display:block;margin:6px 0}
-.contact .btns{margin-top:30px}
-.info{margin-bottom:26px}
+/* process */
+.steps{display:grid;gap:20px;list-style:none;padding:0;counter-reset:s}
+@media(min-width:800px){.steps{grid-template-columns:repeat(4,1fr)}}
+.steps li{counter-increment:s;border-top:1.5px solid var(--gold);padding-top:16px}
+.steps li::before{content:counter(s);font:600 40px var(--serif);color:var(--gold);display:block;line-height:1}
+.steps b{display:block;font:600 24px var(--serif);margin:8px 0 4px}
+.steps span{color:var(--muted);font-size:15px}
 
-footer{border-top:1px solid var(--line);padding:26px 0;text-align:center;color:var(--muted);font-size:.95rem}
+/* order */
+.order .wrap{display:grid;gap:36px}
+@media(min-width:900px){.order .wrap{grid-template-columns:1fr 1fr}}
+form{display:grid;gap:14px;background:var(--bg2);border:1px solid var(--line);border-radius:6px;padding:24px}
+label{font-size:15px;color:var(--muted);display:grid;gap:6px}
+select,textarea{width:100%;background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:4px;padding:12px;font:inherit}
+textarea{min-height:110px;resize:vertical}
+.contact dl{display:grid;gap:14px;margin:0 0 24px}
+.contact dt{color:var(--muted);font-size:14px}
+.contact dd{margin:0;font:600 24px var(--serif)}
+.contact dd a{text-decoration:none;color:var(--gold)}
 
-@media(max-width:560px){
-  .items li{grid-template-columns:1fr}
-  .items .side{grid-column:1;grid-row:auto;text-align:left}
-  .hero{padding:60px 0 64px}
-  section{padding:56px 0}
-}
+footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);font-size:14px;text-align:center}
+footer img{width:72px;height:72px;margin:0 auto 12px;background:none}
+footer p+p{margin-top:6px}
+footer a{color:var(--gold)}
+
+/* sticky mobile bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(27,18,20,.97);border-top:1px solid var(--line)}
+.bar .btn{flex:1;text-align:center;padding:14px 8px}
+@media(min-width:820px){.bar{display:none}body{padding-bottom:0}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
 </style>
 </head>
-<body>
+<body id="top">
 
 <header>
   <div class="wrap">
-    <a class="logo" href="#top"><img src="logo.jpg" alt="">Матрона Московская</a>
+    <a class="brand" href="#top"><img src="img/logo.png" alt="" width="44" height="44">Матрона Московская</a>
     <nav aria-label="Разделы">
-      <a href="#about">О нас</a>
       <a href="#work">Что делаем</a>
-      <a href="#gallery">Галерея</a>
+      <a href="#incense">Ладан</a>
+      <a href="#gallery">Работы</a>
+      <a href="#how">Как заказать</a>
       <a href="#contacts">Контакты</a>
     </nav>
   </div>
 </header>
 
-<main id="top">
-  <div class="hero">
-    <div class="wrap">
-      <img class="hero-logo" src="logo.jpg" alt="Логотип Матрона Московская">
-      <h1>Матрона Московская</h1>
-      <p>Ладан, иконы, чётки и браслеты на заказ</p>
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Иконы и ладан ручной работы в Тирасполе</h1>
+      <p>Пишем иконы, готовим ладан, плетём чётки и браслеты. Каждая вещь делается под ваш заказ.</p>
       <div class="btns">
-        <a class="btn fill" href="tel:077736361">Позвонить</a>
-        <a class="btn line" href="https://t.me/Ponomar_cof_sobor" target="_blank" rel="noopener">Написать в Telegram</a>
+        <a class="btn btn-gold" href="https://t.me/Ponomar_cof_sobor">Заказать в Telegram</a>
+        <a class="btn btn-line" href="tel:077736361">Позвонить</a>
       </div>
+    </div>
+    <div class="emblem"><img src="img/logo.png" alt="Эмблема мастерской «Матрона Московская»" width="440" height="440"></div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <h2>Что мы делаем</h2>
+    <p class="lead">Четыре вида работ. Цену называем до начала, когда обсудим размер, материалы и ваши пожелания.</p>
+    <div class="grid4">
+      <article class="card">
+        <div class="arch"><img src="img/incense-box.jpg" alt="Ладан в коробочке с авторской этикеткой" loading="lazy"></div>
+        <h3>Ладан</h3>
+        <p>Готовим по заказу и фасуем в пакетики или коробочки с этикеткой.</p>
+        <!-- ЦЕНА: добавьте, например «от … руб.» -->
+        <a class="btn btn-line" href="https://t.me/Ponomar_cof_sobor?text=Здравствуйте!%20Хочу%20заказать%20ладан.">Заказать ладан</a>
+      </article>
+      <article class="card">
+        <div class="arch"><img src="img/icon-christ.jpg" alt="Икона Христа Спасителя на золоте" loading="lazy"></div>
+        <h3>Иконы</h3>
+        <p>Пишем икону вашего святого, любого размера, в том числе на камне.</p>
+        <a class="btn btn-line" href="https://t.me/Ponomar_cof_sobor?text=Здравствуйте!%20Хочу%20заказать%20икону.">Заказать икону</a>
+      </article>
+      <article class="card">
+        <div class="arch"><img src="img/chetki.jpg" alt="Плетёные чётки из чёрной нити на ладони" loading="lazy"></div>
+        <h3>Чётки</h3>
+        <p>Плетёные или из бусин. Подберём узлы, цвет и количество под вас.</p>
+        <a class="btn btn-line" href="https://t.me/Ponomar_cof_sobor?text=Здравствуйте!%20Хочу%20заказать%20чётки.">Заказать чётки</a>
+      </article>
+      <article class="card">
+        <div class="arch"><img src="img/chetki.jpg" alt="Плетёный браслет из чёрной нити" loading="lazy" style="object-position:30% 70%"></div>
+        <h3>Браслеты</h3>
+        <p>Плетёные или из бусин. Размер подгоним по запястью.</p>
+        <a class="btn btn-line" href="https://t.me/Ponomar_cof_sobor?text=Здравствуйте!%20Хочу%20заказать%20браслет.">Заказать браслет</a>
+      </article>
     </div>
   </div>
+</section>
 
-  <section id="about" class="about">
-    <div class="wrap">
-      <h2>О нас</h2>
-      <p>Ладан и иконы мы делаем сами и только на заказ. Чётки и браслеты плетём или собираем из бусин, учитывая ваши пожелания.</p>
-      <p class="sign">Андрей Мемей</p>
-    </div>
-  </section>
-
-  <section id="work">
-    <div class="wrap">
-      <h2>Что мы делаем</h2>
-      <ul class="items">
-        <li>
-          <h3>Ладан на заказ</h3>
-          <p>Изготовим ладан по вашему заказу.</p>
-          <div class="side">Цена по запросу<a href="https://t.me/Ponomar_cof_sobor" target="_blank" rel="noopener">Уточнить в Telegram</a></div>
-        </li>
-        <li>
-          <h3>Иконы на заказ</h3>
-          <p>Напишем икону по вашему заказу.</p>
-          <div class="side">Цена по запросу<a href="https://t.me/Ponomar_cof_sobor" target="_blank" rel="noopener">Уточнить в Telegram</a></div>
-        </li>
-        <li>
-          <h3>Чётки</h3>
-          <p>Плетёные или из бусин, как вы захотите.</p>
-          <div class="side">Цена по запросу<a href="https://t.me/Ponomar_cof_sobor" target="_blank" rel="noopener">Уточнить в Telegram</a></div>
-        </li>
-        <li>
-          <h3>Браслеты</h3>
-          <p>Плетёные или из бусин, как вы захотите.</p>
-          <div class="side">Цена по запросу<a href="https://t.me/Ponomar_cof_sobor" target="_blank" rel="noopener">Уточнить в Telegram</a></div>
-        </li>
+<section class="incense" id="incense">
+  <div class="wrap">
+    <div>
+      <h2>Ладан, который мы готовим сами</h2>
+      <p class="lead">Не покупаем готовый, а делаем под заказ. Каждую партию фасуем вручную и подписываем нашей этикеткой «Ручной работы».</p>
+      <ul>
+        <li>Пакетики для храма, дома и в подарок</li>
+        <li>Коробочки с авторской этикеткой</li>
+        <li>Объём и состав обсуждаем с вами</li>
       </ul>
+      <a class="btn btn-gold" href="https://t.me/Ponomar_cof_sobor?text=Здравствуйте!%20Хочу%20заказать%20ладан.">Заказать ладан</a>
     </div>
-  </section>
+    <div class="photos">
+      <img src="img/incense-bags-many.jpg" alt="Ладан, расфасованный по пакетикам" loading="lazy">
+      <img src="img/incense-box.jpg" alt="Коробочка с ладаном и авторские этикетки" loading="lazy">
+      <img src="img/incense-label.jpg" alt="Авторская этикетка «Ручной работы»" loading="lazy">
+    </div>
+  </div>
+</section>
 
-  <section id="gallery">
-    <div class="wrap">
-      <h2>Наши работы</h2>
-      <div class="grid">
-        <img src="work-2.jpg" alt="Икона великомученицы Ирины" loading="lazy">
-        <img src="work-6.jpg" alt="Лик Христа в терновом венце" loading="lazy">
-        <img src="work-7.jpg" alt="Икона Георгия Победоносца на коне" loading="lazy">
-        <img src="work-5.jpg" alt="Эскиз иконы Покров Богородицы" loading="lazy">
-        <img src="work-3.jpg" alt="Плетёные чётки-браслет из чёрной нити" loading="lazy">
-        <img src="work-4.jpg" alt="Лик, выполненный в иконописной манере" loading="lazy">
-        <img src="work-1.jpg" alt="Зарисовка руки" loading="lazy">
-      </div>
+<section id="gallery">
+  <div class="wrap">
+    <h2>Наши работы</h2>
+    <p class="lead">Иконы, которые мы написали. Ваша может быть следующей.</p>
+    <div class="gallery">
+      <figure><img src="img/icon-irina.jpg" alt="Икона великомученицы Ирины" loading="lazy"><figcaption>Великомученица Ирина</figcaption></figure>
+      <figure><img src="img/icon-christ.jpg" alt="Икона Христа Спасителя на золотом фоне" loading="lazy"><figcaption>Христос Спаситель</figcaption></figure>
+      <figure><img src="img/icon-felicity.jpg" alt="Икона святой Фелицаты" loading="lazy"><figcaption>Святая Фелицата</figcaption></figure>
+      <figure><img src="img/icon-george.jpg" alt="Икона Георгия Победоносца на коне" loading="lazy"><figcaption>Георгий Победоносец</figcaption></figure>
+      <figure><img src="img/icon-pokrov-stone.jpg" alt="Икона «Покров Пресвятой Богородицы» на камне" loading="lazy"><figcaption>«Покров Пресвятой Богородицы» на камне</figcaption></figure>
+      <figure><img src="img/icon-nicholas.jpg" alt="Икона святителя Николая: от рисунка до готовой работы" loading="lazy"><figcaption>Святитель Николай: от рисунка до готовой иконы</figcaption></figure>
+      <figure><img src="img/christ-crown.jpg" alt="Лик Христа в терновом венце" loading="lazy"><figcaption>Христос в терновом венце</figcaption></figure>
+      <figure><img src="img/pokrov-sketch.jpg" alt="Эскиз иконы Покров Богородицы" loading="lazy"><figcaption>Эскиз «Покрова»</figcaption></figure>
+      <figure><img src="img/face-sketch.jpg" alt="Лик, выполненный в иконописной манере" loading="lazy"><figcaption>Лик в иконописной манере</figcaption></figure>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="more">
-    <div class="wrap">
-      <h2>Ещё работы и ладан</h2>
-      <div class="slider">
-        <div class="track" id="track" tabindex="0" aria-label="Слайдер с работами">
-          <figure class="slide"><img src="slide-1.jpg" alt="Икона святой Фелицаты" loading="lazy"><figcaption>Икона святой Фелицаты</figcaption></figure>
-          <figure class="slide"><img src="slide-2.jpg" alt="Икона «Покров Пресвятой Богородицы» на камне" loading="lazy"><figcaption>Икона «Покров Пресвятой Богородицы» на камне</figcaption></figure>
-          <figure class="slide"><img src="slide-4.jpg" alt="Икона Христа Спасителя" loading="lazy"><figcaption>Икона Христа Спасителя</figcaption></figure>
-          <figure class="slide"><img src="slide-6.jpg" alt="Икона святителя Николая: от рисунка до готовой работы" loading="lazy"><figcaption>Икона святителя Николая: от рисунка до готовой работы</figcaption></figure>
-          <figure class="slide"><img src="slide-3.jpg" alt="Ладан в курильнице" loading="lazy"><figcaption>Ладан в курильнице</figcaption></figure>
-          <figure class="slide"><img src="slide-5.jpg" alt="Ладан, расфасованный в пакетики" loading="lazy"><figcaption>Ладан, расфасованный в пакетики</figcaption></figure>
-          <figure class="slide"><img src="slide-7.jpg" alt="Ладан в пакетиках" loading="lazy"><figcaption>Ладан в пакетиках</figcaption></figure>
-          <figure class="slide"><img src="slide-8.jpg" alt="Ладан в коробочке с авторской этикеткой" loading="lazy"><figcaption>Ладан в коробочке с авторской этикеткой</figcaption></figure>
-          <figure class="slide"><img src="slide-9.jpg" alt="Авторская этикетка «Ручной работы»" loading="lazy"><figcaption>Авторская этикетка «Ручной работы»</figcaption></figure>
-        </div>
-        <div class="sbtns">
-          <button type="button" id="prev" aria-label="Назад">&#8592;</button>
-          <button type="button" id="next" aria-label="Вперёд">&#8594;</button>
-        </div>
-      </div>
-    </div>
-  </section>
+<section id="how">
+  <div class="wrap">
+    <h2>Как заказать</h2>
+    <p class="lead">Без предоплаты на первом шаге: сначала разговор и эскиз.</p>
+    <ol class="steps">
+      <li><b>Напишите</b><span>В Telegram или по телефону. Скажите, что хотите.</span></li>
+      <li><b>Обсудим</b><span>Размер, материалы, пожелания. Назовём цену и срок.</span></li>
+      <li><b>Изготовим</b><span>Сделаем вручную и пришлём фото готовой работы.</span></li>
+      <li><b>Заберёте</b><span>Приезжайте в Тирасполь или договоримся о доставке.</span></li>
+    </ol>
+  </div>
+</section>
 
-  <section id="order">
-    <div class="wrap">
-      <h2>Как заказать</h2>
-      <ol class="steps">
-        <li>Напишите нам в Telegram или позвоните.</li>
-        <li>Обсудим ваши пожелания и назовём цену.</li>
-        <li>Изготовим заказ.</li>
-      </ol>
+<section class="order" id="contacts">
+  <div class="wrap">
+    <div class="contact">
+      <h2>Мастер Андрей Мемей</h2>
+      <p class="lead">Все работы мы делаем сами. Напишите или позвоните, ответим в тот же день.</p>
+      <dl>
+        <div><dt>Телефон</dt><dd><a href="tel:077736361">077 736 361</a></dd></div>
+        <div><dt>Telegram</dt><dd><a href="https://t.me/Ponomar_cof_sobor">@Ponomar_cof_sobor</a></dd></div>
+        <div><dt>Город и часы работы</dt><dd>Тирасполь, ежедневно 14:00–21:00</dd></div>
+      </dl>
     </div>
-  </section>
-
-  <section id="contacts" class="contact">
-    <div class="wrap">
-      <h2>Контакты</h2>
-      <p class="info">Тирасполь · ежедневно с 14:00 до 21:00</p>
-      <a class="big" href="tel:077736361">077736361</a>
-      <a class="big" href="https://t.me/Ponomar_cof_sobor" target="_blank" rel="noopener">@Ponomar_cof_sobor</a>
-      <div class="btns">
-        <a class="btn fill" href="tel:077736361">Позвонить</a>
-        <a class="btn line" href="https://t.me/Ponomar_cof_sobor" target="_blank" rel="noopener">Написать в Telegram</a>
-      </div>
-    </div>
-  </section>
+    <form id="orderForm">
+      <h3>Быстрый заказ</h3>
+      <label>Что хотите заказать
+        <select id="kind">
+          <option>Икону</option><option>Ладан</option><option>Чётки</option><option>Браслет</option>
+        </select>
+      </label>
+      <label>Пожелания
+        <textarea id="note" placeholder="Например: икона святителя Николая, 20×30 см"></textarea>
+      </label>
+      <button class="btn btn-gold" type="submit">Отправить в Telegram</button>
+    </form>
+  </div>
+</section>
 </main>
 
 <footer>
-  <div class="wrap">© Матрона Московская, Андрей Мемей</div>
+  <div class="wrap"><img src="img/logo.png" alt="" width="72" height="72"><p>© Матрона Московская, Андрей Мемей. Тирасполь.</p><p>Сайт сделан Василием Гаргалыком. <a href="https://vasyagarga1331.github.io/VasiliyGargalyk/" target="_blank" rel="noopener">Мой сайт</a></p></div>
 </footer>
 
+<div class="bar">
+  <a class="btn btn-gold" href="https://t.me/Ponomar_cof_sobor">Написать</a>
+  <a class="btn btn-line" href="tel:077736361">Позвонить</a>
+</div>
+
 <script>
-(function(){var t=document.getElementById('track');
-function go(d){t.scrollBy({left:d*t.clientWidth,behavior:'smooth'})}
-document.getElementById('prev').onclick=function(){go(-1)};
-document.getElementById('next').onclick=function(){go(1)};})();
+document.getElementById('orderForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  var kind=document.getElementById('kind').value;
+  var note=document.getElementById('note').value.trim();
+  var text='Здравствуйте! Хочу заказать: '+kind.toLowerCase()+'.'+(note?' '+note:'');
+  window.open('https://t.me/Ponomar_cof_sobor?text='+encodeURIComponent(text),'_blank','noopener');
+});
 </script>
 </body>
 </html>
